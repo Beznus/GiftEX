@@ -13,3 +13,21 @@
  *= require_tree .
  *= require_self
  */
+@import "bootstrap";
+@import url(https://fonts.googleapis.com/css?family=Mountains+of+Christmas);
+
+body {
+  background-image: image-url('snow.gif');
+}
+
+.christmas {
+  color: red;
+  font-family: 'Mountains of Christmas', cursive;
+}
+
+h1 .christmas {
+  font-size: 30px;
+}
+input, select, textarea{
+    color: black;
+}

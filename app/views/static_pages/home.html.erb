@@ -1,0 +1,30 @@
+<div class="row">
+<div class="col-md-2 col-md-offset-5 col-sm-6 col-sm-offset-3 text-center">
+<%= simple_form_for Participant.new, id: "new-peep" do |f| %>
+  <%= f.error_notification %>
+
+  <div class="christmas" style="color:white;"><h4 style="color:white;">Fill Out Form Below to Enter Gift Exchange!</h4>
+  <div class="form-inputs">
+    <%= f.input :name %>
+    <%= f.input :email %>
+    <%= f.input 'checkbox', label: false, as: :check_boxes, collection: ["Yes! Please send me facts about Christmas!"] %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, "Enter Exchange!", style: "color:black;" %>
+  </div>
+  </div>
+<% end %>
+</div>
+</div>
+<script>
+  $('#new-peep').submit(function (event) {
+    if ($("#participant_checkbox_yes_please_send_me_facts_about_christmas:checked").length > 0){
+    }else{
+      preventDefault();
+      alert("Warning! You have not indicated you want christmas facts!");
+    }
+    
+  });
+  
+</script>
